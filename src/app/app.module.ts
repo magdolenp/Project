@@ -9,6 +9,7 @@ import { FilterBarComponent } from './filter-bar/filter-bar.component';
 import { ShortlistComponent } from './shortlist/shortlist.component';
 import { PersonDetailComponent } from './person-detail/person-detail.component';
 import { PersonService } from './person.service';
+import { PersonListComponent } from './person-list.component/person-list.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PersonService } from './person.service';
     TopBarComponent,
     FilterBarComponent,
     ShortlistComponent,
-    PersonDetailComponent
+    PersonDetailComponent,
+    PersonListComponent
   ],
   imports: [
     BrowserModule,

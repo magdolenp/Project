@@ -1,7 +1,7 @@
 /**
  * Created by Mefisto on 28-Jun-17.
  */
-import { Person } from './person.model';
+import { Person } from './models/person.model';
 
 export const PEOPLE: Person[] = [
   {id: 0, name: 'Emilia Clarke', age: 26, photo: 'assets/photos/Emilia_Clarke.jpg', location: 'USA', costPerPost: 74},

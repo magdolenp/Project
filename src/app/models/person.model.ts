@@ -9,7 +9,7 @@ export interface Person {
   photo: string;
   location: string;
   costPerPost: number;
-  // facebook: string;
-  // twitter: string;
-  // instagram: string;
+  facebook?: string;
+  twitter?: string;
+  instagram?: string;
 }

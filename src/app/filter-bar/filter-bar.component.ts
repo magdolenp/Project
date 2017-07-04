@@ -1,31 +1,31 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 
-import { Person } from '../person.model';
+import { Person } from '../models/person.model';
 import { PersonService } from '../person.service';
-import { Tag } from './tag.model';
+import { Tag } from '../models/tag.model';
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   selector: 'fu-app-filter-bar',
   templateUrl: './filter-bar.component.html',
   styleUrls: ['./filter-bar.component.scss']
 })
-export class FilterBarComponent implements OnInit {
+export class FilterBarComponent implements OnDestroy {
   people: Person[];
-  sliderValue = 21;
+  heroesSub: Subscription;
+  sliderValue: number;
   submitted = false;
   addedTags: Tag[];
   inputValue: string;
 
   constructor(private personService: PersonService) {
     this.addedTags = [];
+    this.heroesSub = this.personService.getPeople().subscribe(people => this.people = people);
+    this.sliderValue = 21;
   }
 
-  getHeroes(): void {
-    this.personService.getPeople().then(people => this.people = people);
-  }
-
-  ngOnInit(): void {
-    this.getHeroes();
+  ngOnDestroy(): void {
+    this.heroesSub.unsubscribe();
   }
 
   onSubmit(): void {
@@ -33,7 +33,7 @@ export class FilterBarComponent implements OnInit {
   }
 
   addTag(): void {
-    this.addedTags.push(new Tag(this.inputValue, false));
+    this.addedTags.push({value: this.inputValue, hover: false});
     this.inputValue = '';
   }
 

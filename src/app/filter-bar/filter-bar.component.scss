@@ -67,11 +67,11 @@
   color: #FFFFFF;
   height: 40px;
   border: none;
-}
 
-.search-button:hover {
-  background-color: #2B313C;
-  box-shadow: 0 0 5px #2B313C;
+  &:hover {
+    background-color: #2B313C;
+    box-shadow: 0 0 5px #2B313C;
+  }
 }
 
 .tags-bar {
@@ -87,11 +87,11 @@
   border-radius: 4px;
   margin: 1px 14px 1px 7px;
   padding: 2px 6px;
-}
 
-.tags:hover {
-  margin-right: 0;
-  background-color: #cccccc;
+  &:hover {
+    margin-right: 0;
+    background-color: #cccccc;
+  }
 }
 
 .material-icons {

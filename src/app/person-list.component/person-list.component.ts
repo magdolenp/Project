@@ -5,11 +5,11 @@ import { PersonService } from '../person.service';
 import { Subscription } from 'rxjs/Subscription';
 
 @Component({
-  selector: 'fu-app-shortlist',
-  templateUrl: './shortlist.component.html',
-  styleUrls: ['./shortlist.component.scss']
+  selector: 'fu-app-person-list',
+  templateUrl: './person-list.component.html',
+  styleUrls: ['./person-list.component.scss']
 })
-export class ShortlistComponent implements OnDestroy {
+export class PersonListComponent implements OnDestroy {
   people: Person[];
   heroesSub: Subscription;
 
@@ -23,9 +23,5 @@ export class ShortlistComponent implements OnDestroy {
 
   getImage(image: string): string {
     return `url(${image})`;
-  }
-
-  getTotal(): number {
-    return this.people.reduce((acc, item ) => acc + item.costPerPost, 0);
   }
 }

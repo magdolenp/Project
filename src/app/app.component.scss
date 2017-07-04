@@ -1,3 +1,5 @@
+$font-color: #D1D4D8;
+
 * {
   font-family: 'Quicksand', sans-serif;
   font-size: 14px;
@@ -12,8 +14,7 @@
 }
 
 .page-header {
-  flex-grow: 0;
-  flex-shrink: 1;
+  flex-basis: 117px;
 }
 
 .content {
@@ -21,19 +22,16 @@
   display: flex;
   flex-direction: row;
   flex-grow: 1;
-  flex-shrink: 1;
   overflow-y: auto;
 }
 
 .side-bar {
   display: flex;
   flex-direction: column;
-  flex-grow: 0;
   flex-shrink: 1;
 }
 
 .person-details {
   flex-grow: 1;
-  flex-shrink: 1;
 }
 
