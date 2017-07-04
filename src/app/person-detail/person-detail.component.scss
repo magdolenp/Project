@@ -1,0 +1,80 @@
+.people-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.person-detail-box {
+  width: 350px;
+  height: 350px;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  margin: 14px;
+}
+
+.person-detail-box:hover {
+  box-shadow: 0 0 8px #888888;
+}
+
+.profile-image {
+  width: 350px;
+  height: 200px;
+  border-radius: 5px 5px 0 0;
+  background: no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.line {
+  margin: 0 20px;
+  height: 1px;
+  background-color: #333333;
+  opacity: 0.2;
+  border: none;
+}
+
+.person-description {
+  width: 350px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.description {
+  padding: 20px;
+}
+
+.description-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.buttons {
+  margin-right: 20px;
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.btn {
+  display: block;
+  margin: 4px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: #D0D6DC;
+}
+
+.btn .icon {
+  width: 22px;
+  height: 22px;
+  margin: 4px;
+}
+
+.buttons .btn:hover {
+  box-shadow: 0 0 8px #888888;
+}

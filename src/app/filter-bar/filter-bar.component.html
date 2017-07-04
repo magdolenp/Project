@@ -1,0 +1,43 @@
+<form (ngSubmit)="onSubmit()" class="filter-bar" #filterForm="ngForm">
+  <label class="big-text">Filter results!</label>
+  <label class="upper-case">What age range are you seeking?</label>
+  <div class="slider-bar">
+    <label for="age" class="slider">
+      18
+      <input type="range" min="18" max="70" value="22" id="age" name="age"
+             [(ngModel)]="sliderValue"
+             #name="ngModel">
+      70
+    </label>
+    <hr class="vertical-line">
+    <label class="slider-value bold">18 - {{sliderValue}}</label>
+  </div>
+
+  <label class="upper-case" for="gender">What gender are you seeking?
+    <select class="drop-down-box" id="gender" name="gender">
+      <option value="male-female">Male & Female</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="et-al">Et al.</option>
+    </select>
+  </label>
+
+  <label class="upper-case" for="interests">What interest are you seeking?</label>
+  <div class="input-search">
+    <input type="text" id="interests" name="interests" class="input" placeholder="e.g. Fashion or Style" autocomplete="off"
+           [(ngModel)]="inputValue"
+           (keyup.enter)="addTag()">
+    <img src="assets/1498678109_icon-111-search.svg" class="input-img">
+  </div>
+  <div class="tags-bar">
+    <div *ngFor="let tag of addedTags, let i = index" class="tags"
+         (mouseover)="tag.hover=true" (mouseout)="tag.hover=false" (click)="deleteTag(i)">
+      {{tag.value}}
+      <label *ngIf="tag.hover"><i class="material-icons">clear</i></label>
+    </div>
+  </div>
+
+  <button type="submit" value="Search" class="search-button big-text upper-case">Search</button>
+</form>
+
+

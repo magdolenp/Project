@@ -1,0 +1,39 @@
+* {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 14px;
+  color: #454c54;
+}
+
+.dashboard {
+  height: 100%;
+  background-color: #F0F2F3;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header {
+  flex-grow: 0;
+  flex-shrink: 1;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  flex-shrink: 1;
+  overflow-y: auto;
+}
+
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 1;
+}
+
+.person-details {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+

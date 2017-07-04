@@ -1,0 +1,60 @@
+<div class="top-bar">
+  <div class="top-row">
+    <div class="left">
+      <a href="."><img src="assets/logo.png" alt="Rpple" class="logo"></a>
+      <ul class="menu-bar">
+        <li class="menu-item">
+          <a class="menu-item-link big-text active" href="https://www.w3schools.com/html/html_links.asp">Ambassadors</a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-item-link big-text" href="https://www.w3schools.com/html/html_links.asp">Campaigns</a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-item-link big-text" href="https://www.w3schools.com/html/html_links.asp">Payments</a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-item-link big-text" href="https://www.w3schools.com/html/html_links.asp">Support</a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-item-link big-text" href="https://www.w3schools.com/html/html_links.asp">Messages</a>
+        </li>
+      </ul>
+      <div class="drop-down">
+        More &#11167;
+        <div class="pop-up-box">
+          <p>How it Works</p>
+          <p>Help</p>
+          <p>Customer Support</p>
+        </div>
+      </div>
+    </div>
+    <div class="right">
+      <div class="input-search">
+        <input type="text" class="input" placeholder="Search">
+        <img src="assets/1498678109_icon-111-search.svg" class="input-img">
+      </div>
+      <hr class="vertical-line">
+      <img src="assets/1499091925_globe-01.svg" class="icon">
+      <div class="profile-image"></div>
+      <p>&#11167;</p>
+    </div>
+  </div>
+
+  <hr class="horizontal-line">
+
+  <div class="bottom-row" *ngIf="people">
+    <div class="left">
+      <p class="big-text">Ambassadors Search</p>
+      <hr class="vertical-line">
+      <p class="big-text">{{getResultNumber()}} Results</p>
+    </div>
+
+    <div class="right">
+      <a class="link" href="."><i class="material-icons">dashboard</i></a>
+      <hr class="vertical-line">
+      <a class="link" href="."><i class="material-icons">menu</i></a>
+      <hr class="vertical-line">
+      <a class="link" href="."><p>Popular &#11167;</p></a>
+    </div>
+  </div>
+</div>

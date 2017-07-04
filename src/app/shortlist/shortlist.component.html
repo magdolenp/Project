@@ -1,0 +1,19 @@
+<div class="shortlist-bar">
+  <p class="upper-case">
+    Your shortlist
+  </p>
+  <div class="list">
+    <div *ngFor="let person of people" class="item">
+      <div class="profile-image-mini" [style.background-image]="getImage(person.photo)"></div>
+      <div class="description">
+        <p class="bold big-text">{{person.name}}</p>
+        <p>{{person.costPerPost}} USD</p>
+      </div>
+    </div>
+  </div>
+  <hr class="line">
+  <div class="bottom">
+    <p class="upper-case">Current total: <span class="bold">{{getTotal()}} USD</span></p>
+    <a class="link bold" href="https://www.w3schools.com">Proceed ></a>
+  </div>
+</div>
