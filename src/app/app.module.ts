@@ -10,6 +10,8 @@ import { ShortlistComponent } from './shortlist/shortlist.component';
 import { PersonDetailComponent } from './person-detail/person-detail.component';
 import { PersonService } from './person.service';
 import { PersonListComponent } from './person-list.component/person-list.component';
+import { CampaignsComponent } from './campaigns/campaigns.component';
+import { AmbassadorsComponent } from './ambassadors/ambassadors.component';
 
 @NgModule({
   declarations: [
@@ -18,16 +20,19 @@ import { PersonListComponent } from './person-list.component/person-list.compone
     FilterBarComponent,
     ShortlistComponent,
     PersonDetailComponent,
-    PersonListComponent
+    PersonListComponent,
+    CampaignsComponent,
+    AmbassadorsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [
     PersonService,
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

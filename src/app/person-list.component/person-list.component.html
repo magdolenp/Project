@@ -1,23 +1,4 @@
 <div *ngIf="people" class="people-list">
-  <div *ngFor="let person of people" class="person-detail-box">
-    <div class="profile-image" [style.background-image]="getImage(person.photo)"></div>
-    <div class="person-description">
-      <div class="description">
-        <p class="bold big-text">{{person.name}}</p>
-        <p>Age: {{person.age}} | Location: {{person.location}}</p>
-      </div>
-      <hr class="line">
-      <div class="description-row">
-        <div class="description">
-          <p class="bold big-text">{{person.costPerPost}} USD</p>
-          <p>Cost Per Post</p>
-        </div>
-        <div class="buttons">
-          <a class="btn" href="https://twitter.com/"><img class="icon" src="assets/1498677522_03-twitter.svg"/></a>
-          <a class="btn" href="https://www.facebook.com/"><img class="icon" src="assets/1498677537_06-facebook.svg"/></a>
-          <a class="btn" href="https://www.instagram.com/"><img class="icon" src="assets/1498677551_38-instagram.svg"/></a>
-        </div>
-      </div>
-    </div>
-  </div>
+  <fu-app-person-detail *ngFor="let person of people" [person]="person">
+  </fu-app-person-detail>
 </div>

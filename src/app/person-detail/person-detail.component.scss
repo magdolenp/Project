@@ -1,3 +1,5 @@
+@import 'variables';
+
 .people-list {
   display: flex;
   flex-direction: row;
@@ -8,14 +10,14 @@
 .person-detail-box {
   width: 350px;
   height: 350px;
-  background-color: #FFFFFF;
+  background-color: $bg;
   display: flex;
   flex-direction: column;
   border-radius: 5px;
   margin: 14px;
 
   &:hover {
-    box-shadow: 0 0 8px #888888;
+    box-shadow: 0 0 8px $box-shadow;
   }
 }
 
@@ -30,7 +32,7 @@
 .line {
   margin: 0 20px;
   height: 1px;
-  background-color: #333333;
+  background-color: $line;
   opacity: 0.2;
   border: none;
 }
@@ -66,7 +68,7 @@
   height: 30px;
   width: 30px;
   border-radius: 50%;
-  background-color: #D0D6DC;
+  background-color: $bg;
 }
 
 .btn .icon {
@@ -76,5 +78,5 @@
 }
 
 .buttons .btn:hover {
-  box-shadow: 0 0 8px #888888;
+  box-shadow: 0 0 8px $box-shadow;
 }

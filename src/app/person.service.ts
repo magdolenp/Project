@@ -10,20 +10,12 @@ import { Subject } from 'rxjs/Subject';
 
 @Injectable()
 export class PersonService {
-  private  people$ = new Subject<Person[]>();
   private people = PEOPLE;
-
-  constructor() {
-    setInterval(
-      () => {
-        // this.people = this.people.slice(1);
-        this.people$.next(this.people);
-      },
-      1000
-    );
-  }
+  private people$ = new Observable(subscriber => {
+    subscriber.next(this.people);
+  });
 
   getPeople(): Observable<Person[]> {
-    return this.people$.asObservable();
+    return this.people$;
   }
 }

@@ -1,0 +1,18 @@
+@import 'variables';
+
+.content {
+  width: 100%;
+  display: flex;
+  overflow-y: auto;
+  background-color: $wall;
+}
+
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+}
+
+.person-details {
+  flex-grow: 1;
+}

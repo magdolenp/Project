@@ -20,8 +20,4 @@ export class PersonListComponent implements OnDestroy {
   ngOnDestroy(): void {
     this.heroesSub.unsubscribe();
   }
-
-  getImage(image: string): string {
-    return `url(${image})`;
-  }
 }

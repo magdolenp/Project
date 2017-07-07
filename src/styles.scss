@@ -1,4 +1,5 @@
 /** WARNING: Do NOT import this file in any component style */
+@import 'variables';
 
 html, body {
   height: 100%;
@@ -26,7 +27,7 @@ input { /* stylelint-disable-line selector-no-type */
 
 .bold {
   font-weight: 900;
-  color: #0b0d0e;
+  color: $font-bold;
 }
 
 .big-text {
@@ -37,13 +38,13 @@ input { /* stylelint-disable-line selector-no-type */
   width: 1px;
   height: 22px;
   border: none;
-  background-color: #333333;
+  background-color: $line;
   opacity: 0.5;
 }
 
 .horizontal-line {
   height: 1px;
   border: none;
-  background-color: #333333;
+  background-color: $line;
   opacity: 0.2;
 }

@@ -1,3 +1,5 @@
+@import 'variables';
+
 .drop-down-box {
   width: 300px;
   padding: 8px 12px;
@@ -11,11 +13,11 @@
 .filter-bar {
   width: 350px;
   height: 350px;
-  background-color: #FFFFFF;
+  background-color: $bg;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  box-shadow: 0 0 5px #888888;
+  box-shadow: 0 0 5px $box-shadow;
   padding: 24px;
 }
 
@@ -48,7 +50,7 @@
   height: 100%;
   width: 100%;
   padding-left: 5px;
-  border: 1px solid #cccccc;
+  border: 1px solid $line;
   border-radius: 4px;
   box-sizing: border-box;
 }
@@ -63,14 +65,13 @@
 
 .search-button {
   border-radius: 7px;
-  background-color: #2E3442;
-  color: #FFFFFF;
+  background-color: $btn;
+  color: $bg;
   height: 40px;
   border: none;
 
   &:hover {
-    background-color: #2B313C;
-    box-shadow: 0 0 5px #2B313C;
+    box-shadow: 0 0 5px $box-shadow;
   }
 }
 
@@ -83,14 +84,14 @@
 
 .tags {
   height: 22px;
-  background-color: #D0D6DC;
+  background-color: $tag;
   border-radius: 4px;
   margin: 1px 14px 1px 7px;
   padding: 2px 6px;
 
   &:hover {
     margin-right: 0;
-    background-color: #cccccc;
+    background-color: $tag-hover;
   }
 }
 

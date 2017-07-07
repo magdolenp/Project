@@ -1,10 +1,12 @@
+@import 'variables';
+
 .shortlist-bar {
   width: 350px;
-  background-color: #FFFFFF;
+  background-color: $bg;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  box-shadow: 0 0 5px #888888;
+  box-shadow: 0 0 5px $box-shadow;
   padding: 24px;
 }
 
@@ -35,8 +37,8 @@
 
 .item:hover,
 .link:hover {
-  background-color: #cccccc;
-  box-shadow: 0 0 8px #888888;
+  background-color: $tag;
+  box-shadow: 0 0 8px $box-shadow;
 }
 
 .description {
@@ -49,13 +51,12 @@
 .line {
   margin: 20px 0;
   height: 1px;
-  background-color: #333333;
+  background-color: $line;
   opacity: 0.2;
   border: none;
 }
 
 .link {
   text-decoration: none;
-  color: #111111;
 }
 
