@@ -89,14 +89,14 @@
   position: relative;
   width: 280px;
   height: 32px;
+  border: 1px solid $box-shadow;
+  border-radius: 4px;
 }
 
 .input-search .input {
   height: 100%;
   width: 100%;
   padding-left: 5px;
-  border: 1px solid $box-shadow;
-  border-radius: 4px;
   box-sizing: border-box;
 }
 

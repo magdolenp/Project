@@ -1,0 +1,9 @@
+@import 'variables';
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  background-color: $wall;
+}
