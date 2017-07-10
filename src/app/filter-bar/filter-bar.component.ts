@@ -4,6 +4,8 @@ import { Person } from '../models/person.model';
 import { PersonService } from '../person.service';
 import { Tag } from '../models/tag.model';
 import { Subscription } from 'rxjs/Subscription';
+import { Item } from '../models/item.model';
+import { Event } from '@angular/router';
 
 @Component({
   selector: 'fu-app-filter-bar',
@@ -17,6 +19,10 @@ export class FilterBarComponent implements OnDestroy {
   submitted = false;
   addedTags: Tag[];
   inputValue: string;
+  selectOptions: Item[] = [
+    {value: 'male', label: 'Male'},
+    {value: 'female', label: 'Female'},
+  ];
 
   constructor(private personService: PersonService) {
     this.addedTags = [];
@@ -42,5 +48,9 @@ export class FilterBarComponent implements OnDestroy {
 
   deleteTag(index: number): void {
     this.addedTags.splice(index, 1);
+  }
+
+  handler(event: Event): void {
+    console.log('Value changed!');
   }
 }

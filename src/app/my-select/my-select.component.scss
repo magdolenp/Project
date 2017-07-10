@@ -1,0 +1,29 @@
+@import 'variables';
+
+.select-box {
+  width: 100%;
+  padding: 6px;
+}
+
+.hidden-box {
+  display: none;
+}
+
+.show-box {
+  display: block;
+  position: absolute;
+  background-color: $bg;
+  padding: 6px;
+  border: 1px solid $box-shadow;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.item {
+  margin: 2px 0;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $tag;
+  }
+}

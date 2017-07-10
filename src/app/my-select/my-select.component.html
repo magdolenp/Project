@@ -1,3 +1,17 @@
-<p>
-  my-select works!
-</p>
+<div>
+  <div class="select-box big-text"
+       (click)="dropDown()">
+    {{value}}
+  </div>
+  <div class="hidden-box"
+       [ngClass]="{'show-box':showBox}">
+    <div *ngFor="let item of options"
+         (click)="itemSelected(item)"
+         class="item big-text">
+      <div *ngIf="item.label; else no_label">
+        {{item.label}}
+      </div>
+      <ng-template #no_label>{{item.value}}</ng-template>
+    </div>
+  </div>
+</div>

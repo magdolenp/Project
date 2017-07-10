@@ -13,15 +13,7 @@
     <label class="slider-value bold">18 - {{sliderValue}}</label>
   </div>
 
-  <label class="upper-case" for="gender">What gender are you seeking?
-    <select class="drop-down-box" id="gender" name="gender">
-      <option value="male-female">Male & Female</option>
-      <option value="male">Male</option>
-      <option value="female">Female</option>
-      <option value="et-al">Et al.</option>
-    </select>
-    <fu-app-my-select></fu-app-my-select>
-  </label>
+  <fu-app-my-select [options]="selectOptions" [value]="'male'" (valueChange)="handler($event)" class="drop-down-box"></fu-app-my-select>
 
   <label class="upper-case" for="interests">What interest are you seeking?</label>
   <div class="input-search">

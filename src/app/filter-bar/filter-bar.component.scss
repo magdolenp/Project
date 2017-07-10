@@ -1,10 +1,8 @@
 @import 'variables';
 
 .drop-down-box {
-  width: 280px;
-  padding: 8px 12px;
+  width: 100%;
   margin: 8px 0;
-  display: inline-block;
   border: 1px solid $box-shadow;
   background-color: $bg;
   border-radius: 4px;
