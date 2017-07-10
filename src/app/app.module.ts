@@ -12,6 +12,7 @@ import { PersonService } from './person.service';
 import { PersonListComponent } from './person-list.component/person-list.component';
 import { CampaignsComponent } from './campaigns/campaigns.component';
 import { AmbassadorsComponent } from './ambassadors/ambassadors.component';
+import { MySelectComponent } from './my-select/my-select.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AmbassadorsComponent } from './ambassadors/ambassadors.component';
     PersonDetailComponent,
     PersonListComponent,
     CampaignsComponent,
-    AmbassadorsComponent
+    AmbassadorsComponent,
+    MySelectComponent
   ],
   imports: [
     BrowserModule,

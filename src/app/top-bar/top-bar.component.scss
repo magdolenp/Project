@@ -10,7 +10,7 @@
 
 .top-row {
   width: 100%;
-  flex-basis: 68px;
+  flex-basis: 69px;
   display: flex;
   flex-direction: row;
 }
@@ -38,12 +38,13 @@
   align-items: center;
   text-decoration: none;
   background-color: $bg;
-  padding: 0 12px;
+  padding: 0 18px;
   color: $font;
 }
 
 .active, .menu-item:hover {
   border-bottom: 1px solid $active;
+  color: $font-bold;
 }
 
 .drop-down {
@@ -56,9 +57,9 @@
 .pop-up-box {
   display: none;
   position: absolute;
-  left: 556px;
-  top: 40px;
-  width: 140px;
+  left: 620px;
+  top: 44px;
+  width: 160px;
   height: 65px;
   color: $bg;
   border-radius: 4px;
@@ -78,11 +79,14 @@
 }
 
 .top-row .right {
-  width: 460px;
   margin-left: auto;
   display: flex;
-  justify-content: space-around;
+  flex-direction: row-reverse;
   align-items: center;
+}
+
+.right > * {
+  margin: 0 15px;
 }
 
 .input-search {
@@ -111,6 +115,7 @@
 .icon {
   width: 22px;
   height: 22px;
+  opacity: 0.6;
 }
 
 .profile-image {
@@ -123,7 +128,7 @@
 
 .bottom-row {
   width: 100%;
-  flex-basis: 48px;
+  flex-basis: 59px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -138,10 +143,9 @@
 }
 
 .bottom-row .right {
-  width: 200px;
   margin-left: auto;
   display: flex;
-  justify-content: space-around;
+  flex-direction: row-reverse;
   align-items: center;
 }
 

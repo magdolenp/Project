@@ -39,9 +39,9 @@ export class CampaignsComponent {
   task2(): boolean {
     const obj1: Obj = {'Ola': 420};
     const obj2: Obj = {'Ola': 322};
-    const compare =
-      (list1: Obj, list2: Obj) => Object.keys(list1).every((item, index) => item === Object.keys(obj2)[index]);
-    return Object.keys(obj1).length === Object.keys(obj2).length ? compare(obj1, obj2) : false;
+    const compare = (list1: Obj, list2: Obj) =>
+        Object.keys(list1).sort().every((item, index) => item === Object.keys(obj2).sort()[index]);
+    return compare(obj1, obj2);
   }
 
   /**
@@ -50,10 +50,10 @@ export class CampaignsComponent {
    */
   task3(): boolean {
     const obj1: Obj = {'Ola': 322, 'Aaa': 95};
-    const obj2: Obj = {'Ola': 322, 'Bbb': 32};
+    const obj2: Obj = {'Bbb': 42, 'Ola': 322};
     const compare = (list1: Obj, list2: Obj) => Object.keys(list1).every(
-      (item, index) =>
-        item === Object.keys(list2)[index] ? (<any>Object).values(list1)[index] === (<any>Object).values(list2)[index] : true
+      item =>
+        !(item in list2) || list1[item] === list2[item]
     );
     return compare(obj1, obj2);
   }
@@ -78,8 +78,7 @@ export class CampaignsComponent {
    */
   task5(): string {
     const obj1: Css = {'div': true, 'body': false, 'img': true};
-    const concat = (css: Css) => Object.keys(css).filter((item, index) => (<any>Object).values(css)[index])
-      .reduce((acc, item, index) => acc + item + ' ', '').trim();
+    const concat = (css: Css) => Object.keys(css).filter(item => css[item]).join(' ');
     return concat(obj1);
   }
 
@@ -88,13 +87,13 @@ export class CampaignsComponent {
    * Výstup: pole uspořádných n-tic (heterogenních polí), kde první n-tice obsahuje názvy sloupců tabulky
    * a každá další k+1-tá n-tice obsahuje hodnoty buněk k-tého řádku v odpovídajícím pořadí (any[][])
    */
-  task6(): any[][] {
+  task6(): string {
     const obj1 = [
       {a: 1, b: 2, c: 3},
       {a: 4, b: 5, c: 6},
     ];
-    const result = (list: any[]) => [Object.keys(list[0]), ...list.map(item => (<any>Object).values(item))];
+    const result = (list: any[]) => [Object.keys(list[0]), ...list.map(item => Object.keys(item).map(key => item[key]))];
     console.log(result(obj1));
-    return result(obj1);
+    return JSON.stringify(result(obj1));
   }
 }

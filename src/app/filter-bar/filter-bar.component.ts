@@ -22,6 +22,7 @@ export class FilterBarComponent implements OnDestroy {
     this.addedTags = [];
     this.heroesSub = this.personService.getPeople().subscribe(people => this.people = people);
     this.sliderValue = 21;
+    this.inputValue = '';
   }
 
   ngOnDestroy(): void {
@@ -33,11 +34,13 @@ export class FilterBarComponent implements OnDestroy {
   }
 
   addTag(): void {
-    this.addedTags.push({value: this.inputValue, hover: false});
-    this.inputValue = '';
+    if (this.inputValue !== '') {
+      this.addedTags.push({value: this.inputValue, hover: false});
+      this.inputValue = '';
+    }
   }
 
   deleteTag(index: number): void {
-      this.addedTags.splice(index, 1);
+    this.addedTags.splice(index, 1);
   }
 }
