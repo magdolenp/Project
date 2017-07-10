@@ -21,8 +21,10 @@ export class FilterBarComponent implements OnDestroy {
   inputValue: string;
   selectOptions: Item[] = [
     {value: 'male', label: 'Male'},
-    {value: 'female', label: 'Female'},
+    {value: 'female'},
+    {value: 'etal', label: 'et al.'},
   ];
+  selectValue = 'male';
 
   constructor(private personService: PersonService) {
     this.addedTags = [];
@@ -51,6 +53,6 @@ export class FilterBarComponent implements OnDestroy {
   }
 
   handler(event: Event): void {
-    console.log('Value changed!');
+    console.log('Value changed! ' + this.selectValue);
   }
 }

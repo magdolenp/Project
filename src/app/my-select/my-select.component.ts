@@ -35,7 +35,14 @@ export class MySelectComponent implements OnInit {
    */
   itemSelected(item: Item): void {
     this.value = item.label ? item.label : item.value;
+    this.valueChange.emit(this.value);
+    this.hide();
+  }
+
+  /**
+   * Hide drop-down box
+   */
+  hide(): void {
     this.showBox = false;
-    this.valueChange.emit();
   }
 }

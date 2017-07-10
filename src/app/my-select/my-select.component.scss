@@ -1,8 +1,18 @@
 @import 'variables';
 
+.select {
+  position: relative;
+}
+
 .select-box {
   width: 100%;
+  display: flex;
+  justify-content: space-between;
   padding: 6px;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .hidden-box {
@@ -12,6 +22,7 @@
 .show-box {
   display: block;
   position: absolute;
+  width: 100%;
   background-color: $bg;
   padding: 6px;
   border: 1px solid $box-shadow;
@@ -26,4 +37,17 @@
     cursor: pointer;
     background-color: $tag;
   }
+}
+
+.click-handler-hidden {
+  display: none;
+}
+
+.click-handler-show {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

@@ -13,7 +13,7 @@
     <label class="slider-value bold">18 - {{sliderValue}}</label>
   </div>
 
-  <fu-app-my-select [options]="selectOptions" [value]="'male'" (valueChange)="handler($event)" class="drop-down-box"></fu-app-my-select>
+  <fu-app-my-select [options]="selectOptions" [(value)]="selectValue" (valueChange)="handler($event)" class="drop-down-box"></fu-app-my-select>
 
   <label class="upper-case" for="interests">What interest are you seeking?</label>
   <div class="input-search">

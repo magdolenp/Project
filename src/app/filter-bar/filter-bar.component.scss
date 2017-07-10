@@ -40,7 +40,8 @@
 }
 
 .input-search {
-  position: relative;
+  display: flex;
+  justify-content: space-between;
   width: 280px;
   height: 32px;
   border: 1px solid $box-shadow;
@@ -55,11 +56,9 @@
 }
 
 .input-search .input-img {
-  position: absolute;
   width: 30px;
   height: 30px;
-  top: 1px;
-  right: 5px;
+  margin-right: 4px;
 }
 
 .search-button {
